@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Primera Practica En Js" />
+    <title>Fundamentos De JavaScript</title>
+  </head>
+  <body>
+    <h1>Fundamentos De JavaScript</h1>
+    <h2>Empezando Con JS</h2>
+
+    <script>
+      //Numerico
+      let numeroEntero = 4;
+      let numeroFloat = 3.14159;
+      console.log(numeroEntero, numeroFloat);
+
+      //Cadena
+      let nombre = "Nestor Yescas";
+      let nom1 = "Pedro";
+      let nom2 = "Jhon";
+      console.log(nombre, nom1, nom2);
+
+      //Boleano
+      let valorVer = true;
+      let valorFal = false;
+      console.log(valorVer, valorFal);
+
+      //Typeof
+      let num = 5;
+      console.log(typeof num);
+
+      //Js es Case-Sensitive
+      let a = 4;
+      let A = "Sally";
+      console.log(a, A);
+
+      //Comentarios
+      /*
+        A mi me gusta el Rock Clasico,
+        Led Zeppelin es mi Banda favorita.
+        */
+
+      //Nombrar Variables
+      /*
+       let 2myvar = "Jhon";
+       let my-var = "Jhon";
+       let my var = "Jhon";
+       console.log(2myvar, my-var, my var);
+
+       ESTAS VARIABLES NO SON VALIDAS, MUESTRA ERROR EN CONSOLA.
+       */
+
+      //variables con mas de una palabra
+      //Camel Case
+      let myVariableName = "Jhon";
+
+      //Pascal Case
+      let MyVariableName = "Ness";
+
+      //Snake Case
+      let my_variale_name = "Niko Kriko";
+
+      console.log(myVariableName, MyVariableName, my_variale_name);
+
+      let [xx, yy, zz] = ["orange", "Banana", "Cherry"];
+      console.log(xx);
+      console.log(yy);
+      console.log(zz);
+
+      //Salida De Varibles
+      let palabra = "Awesome";
+      console.log("Js is " + palabra);
+
+      //Template Literal
+      let x_ = "Js";
+      let y_ = "Is";
+      let z_ = "Awesome";
+      console.log(x_ + " " + y_ + " " + z_);
+      //Las comillas se usaron para crear un espacio entre los valores.
+
+      let primero = "Js";
+      let segundo = "is";
+      let tercero = "awesome";
+      console.log(`${primero} ${segundo} ${tercero}`);
+
+      //Cadenas Multilinea
+      let multi = `No entres docilmente en esa buena noche,
+      la vejez debe delirar y arder al final del dia,
+      Rabia, rabia contra la luz en su agonia.
+      -- Dylan Thomas --
+      `;
+      console.log(multi);
+
+      //String Length
+      let abc = "Hello, World";
+      console.log(abc.length);
+
+      //Varios Ejemplos
+      let text2 = "Escuela De Ciencias";
+      let text1 = "Licenciatura En Computacion";
+      let text0 = "Yescas Ramos Nestor";
+
+      console.log(text0.length);
+      console.log(text1.length);
+      console.log(text2.length);
+
+      //Boleanos
+      console.log(10 > 9);
+      console.log(10 == 9);
+      console.log(10 < 9);
+      console.log(1 >= 0);
+      console.log(1 <= 123);
+
+      //Evaluando Valores y Variables
+      //Verdadero
+      console.log(Boolean("abc"));
+      console.log(Boolean(123));
+      console.log(Boolean(["apple", "cherry", "banana"]));
+      //Falso
+      console.log(Boolean(false));
+      console.log(Boolean(null));
+      console.log(Boolean(0));
+      console.log(Boolean(""));
+      console.log(Boolean(undefined));
+      console.log(Boolean(NaN));
+      //
+
+      //OPERADORES
+      //Operadores Aritmeticos
+      let x = 10;
+      let y = 50;
+      let z = 3;
+
+      console.log(x + y);
+      console.log(x - y);
+      console.log(x * y);
+      console.log(x / y);
+      console.log(x % y);
+      console.log(x ** z);
+
+      //Operadores de Asignacion
+      let x_1 = 1;
+      console.log((x_1 += 3));
+      let x_2 = 9;
+      console.log((x_2 -= 3));
+      let x_3 = 2;
+      console.log((x_3 *= 3));
+      let x_4 = 8;
+      console.log((x_4 /= 3));
+      let x_5 = 10;
+      console.log((x_5 %= 3));
+      let x_6 = 7;
+      console.log((x_6 **= 3));
+      let x_7 = 4;
+      console.log((x_7 &= 3));
+      let x_8 = 6;
+      console.log((x_8 |= 3));
+      let x_9 = 5;
+      console.log((x_9 ^= 66));
+      let x_10 = 9;
+      console.log((x_10 >>= 3));
+      let x_11 = 6;
+      console.log((x_11 <<= 3));
+
+      //Operadores De Comparacion
+      let numero1 = 10;
+      let numero2 = 26;
+      console.log(numero1 == numero2);
+      console.log(numero1 === numero2);
+      console.log(numero1 != numero2);
+      console.log(numero1 > numero2);
+      console.log(numero1 < numero2);
+      console.log(numero1 >= numero2);
+      console.log(numero1 <= numero2);
+
+      //Operadores Logicos
+      let numer = 129;
+      console.log(numer < 6 && numer < 20);
+      console.log(numer < 4 || numer < 4);
+      console.log(!(numer < 7 && numer < 40));
+
+      //EJERCICIOS
+
+      //1)Cree una variable llamada z, asígnele x + y y muestre el resultado.
+      let nX = 5;
+      let nY = 10;
+
+      let nZ = nX + nY;
+      console.log(nZ);
+
+      //2) Elimina los caracteres ilegales en el nombre de la variable
+      let myFirstName = "John";
+      console.log(myFirstName);
+
+      //3)El siguiente ejemplo de código imprimiría el tipo de datos de x, ¿qué tipo de datos sería? number
+      let xxx = 20.5;
+      console.log(typeof xxx);
+
+      //4) Utiliza el método length para imprimir la longitud de la cadena, ¿que valor da? 11
+      let len = "Hello World";
+      console.log(len.length);
+      
+    </script>
+  </body>
+</html>
