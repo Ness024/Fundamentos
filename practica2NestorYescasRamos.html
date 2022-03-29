@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Practica 2 de Fundamentos de Programacion con el lenguaje JavaScript, Calculadora Sencilla y la formula general "
+    />
+    <title>Practica 2</title>
+  </head>
+  <body>
+    <h1>Calculadora y Formula Cuadratica</h1>
+    <h2>2da Practica de JavaScript</h2>
+    <script>
+      /*
+      2da Practica de JavaScript
+      CALCULADORA
+      */
+
+      let eleccion = prompt(
+        "Que desea realizar?\n1) Calculadora\n2) Formula Cuadratica"
+      );
+
+      if (eleccion == 1) {
+        let xer;
+        let resultado;
+        do {
+          let numero1 = parseFloat(prompt("Numero 1", " "));
+          let num = prompt("Operacion A Realizar\n+ - * /", " ");
+          let numero2 = parseFloat(prompt("Numero 2", ""));
+
+          switch (num) {
+            case "+":
+              resultado = parseFloat(numero1 + numero2);
+              break;
+            case "-":
+              resultado = parseFloat(numero1 - numero2);
+              break;
+            case "*":
+              resultado = parseFloat(numero1 * numero2);
+              break;
+            case "/":
+              resultado = parseFloat(numero1 / numero2);
+              break;
+            default:
+              resultado = " Error, Opcion No Valida ";
+              break;
+          }
+
+          //resultado en ventana modal
+          alert(`El Resultado Es ${resultado}\n Gracias`);
+
+          //resultado en consola
+          console.log(resultado);
+
+          //Resultado en La Pagina
+          document.write(
+            `El Resultado De Sumar ${numero1} ${num} ${numero2} =${resultado}`
+          );
+
+          xer = prompt("Para Realizar Otra Operacion preciona\n1) si\n2) no");
+        } while (xer != 2);
+      } else if (eleccion == 2) {
+        /*
+        Esta formula sirve para reolver ecuaciones cuadraticas de la forma ax^2+bx+c=0
+        La formula es x=(-b+-raizcuadarada de (b^2-4ac))/2a
+
+        Errores en el resultado 
+        X / 0 = indefinido o infinity 
+        0 / 0= indeterminado o NaN
+        */
+
+        let a = prompt("Valor de (a)");
+        let b = prompt("Valor de (b)");
+        let c = prompt("Valor de (c)");
+
+        function formula1(a, b, c) {
+          return (-1 * b + Math.sqrt(b * b - 4 * a * c)) / (2 * a);
+        }
+        let x1 = formula1(a, b, c);
+
+        function formula2(a, b, c) {
+          return (-1 * b - Math.sqrt(b * b - 4 * a * c)) / (2 * a);
+        }
+        let x2 = formula2(a, b, c);
+
+        //Resultado en consola
+        console.log(x1, x2);
+
+        //Resultado en ventana modal
+        alert(`Los Valores de Raiz 1 y Raiz 2 son:\n x1 = ${x1} \n x2 = ${x2}`);
+
+        //Resultado en pagina
+        document.write(
+          `Los Valores de Raiz 1 y Raiz 2 son:\n x1 = ${x1} \n x22 = ${x2}`
+        );
+      } else {
+        alert("Opcion NO Exisente");
+      }
+    </script>
+  </body>
+</html>
