@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="description"
-      content="Practica 2 de Fundamentos de Programacion con el lenguaje JavaScript, Calculadora Sencilla y la formula general "
-    />
+    <meta name="description" content="Practica 2 de Fundamentos de Programacion con el lenguaje JavaScript, Calculadora Sencilla y la formula general "/>
     <title>Practica 2</title>
   </head>
   <body>
@@ -18,9 +15,7 @@
       CALCULADORA
       */
 
-      let eleccion = prompt(
-        "Que desea realizar?\n1) Calculadora\n2) Formula Cuadratica"
-      );
+      let eleccion = prompt("Que desea realizar?\n1) Calculadora\n2) Formula Cuadratica");
 
       if (eleccion == 1) {
         let xer;
@@ -55,9 +50,7 @@
           console.log(resultado);
 
           //Resultado en La Pagina
-          document.write(
-            `El Resultado De Sumar ${numero1} ${num} ${numero2} =${resultado}`
-          );
+          document.write(`El Resultado De Sumar ${numero1} ${num} ${numero2} =${resultado}`);
 
           xer = prompt("Para Realizar Otra Operacion preciona\n1) si\n2) no");
         } while (xer != 2);
@@ -92,9 +85,7 @@
         alert(`Los Valores de Raiz 1 y Raiz 2 son:\n x1 = ${x1} \n x2 = ${x2}`);
 
         //Resultado en pagina
-        document.write(
-          `Los Valores de Raiz 1 y Raiz 2 son:\n x1 = ${x1} \n x22 = ${x2}`
-        );
+        document.write(`Los Valores de Raiz 1 y Raiz 2 son:\n x1 = ${x1} \n x22 = ${x2}`);
       } else {
         alert("Opcion NO Exisente");
       }
