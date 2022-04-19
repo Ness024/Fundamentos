@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, width=device-width, initial-scale=1"
+    />
+    <meta
+      name="description"
+      content="Este es la tercera practica de JavaScript, Calculadora de opcion multiple"
+    />
+    <title>Practica 4</title>
+  </head>
+  <body>
+    <h2 style="color: aqua;">CALCULADORA</h2>
+    <h3 style="color: cadetblue;">4ta Practica de JavaScript</h3>
+
+    <script>
+      /*
+      4ta Practica de JavaScript
+      CALCULADORA
+      */
+      let repetir;
+      let resultado;
+      do {
+        let numero1 = parseFloat(prompt("Inserte Numero 1", " "));
+        let num = prompt("Operacion A Realizar\n+ - * /", " ");
+        let numero2 = parseFloat(prompt("Inserte Numero 2", ""));
+
+        switch (num) {
+          case "+":
+            resultado = parseFloat(numero1 + numero2);
+            break;
+          case "-":
+            resultado = parseFloat(numero1 - numero2);
+            break;
+          case "*":
+            resultado = parseFloat(numero1 * numero2);
+            break;
+          case "/":
+            resultado = parseFloat(numero1 / numero2);
+            break;
+          default:
+            resultado = " Error, Opcion No Valida ";
+            break;
+        }
+
+        //resultado en ventana modal
+        alert(`El Resultado Es ${resultado}\n Gracias`);
+22
+        //resultado en consola
+        console.log(resultado);
+
+        //Resultado en La Pagina
+        document.write(`El Resultado De Sumar ${numero1} ${num} ${numero2} =${resultado} `);
+
+        repetir = prompt("¿Desea volver Fa ejecutar otra operación S/N?\nS) si\nn) no");
+      } while (repetir != 'n');
+    </script>
+  </body>
+</html>
