@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2 style="text-align: center">
+      Practicas del video 35 del tutorial De JavaScript
+    </h2>
+
+    <script>
+      /*--------------------------------------------------------------------------
+      1) Programa una función que cuente el número de caracteres de una cadena
+      de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+      --------------------------------------------------------------------------*/
+
+      function miFuncion(cadena = "Hola Mundo") {
+        console.info(`La cadena "${cadena}" tiene ${cadena.length} caracteres`);
+      }
+      miFuncion();
+      miFuncion("Hi...My Name is Nestor");
+
+      /*--------------------------------------------------------------------------
+      2) Programa una función que te devuelva el texto recortado según el número
+      de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
+      --------------------------------------------------------------------------*/
+
+      function miFuncion2(cadena = "Hola Mundo", longitud = 4) {
+        console.info(cadena.slice(0, longitud));
+      }
+      miFuncion2();
+      miFuncion2("Mama mima a Memo", 11);
+
+      /*--------------------------------------------------------------------------
+      3) Programa una función que dada una String te devuelva un Array de textos
+      separados por cierto caracter, pe. miFuncion('hola que tal', ' ')
+      devolverá ['hola', 'que', 'tal'].
+      --------------------------------------------------------------------------*/
+
+      function miFuncion3(cadena = "Hola Que Tal", separador = " ") {
+        console.info(cadena.split(separador));
+      }
+      miFuncion3();
+      miFuncion3("Deja_La_programacion_y_vamo_a_pistear...","_");
+
+      /*--------------------------------------------------------------------------
+      4) Programa una función que repita un texto X veces, pe. miFuncion('Hola
+      Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
+      --------------------------------------------------------------------------*/
+
+      function miFuncion4(texto = "Hola Mundo", xveces = 3) {
+        for (let i = 1; i <= xveces; i++) {
+          console.info(`[${i}] ${texto}`);
+        }
+      }
+      miFuncion4();
+      miFuncion4("You Won't See Me Die Here",5);
+
+    </script>
+  </body>
+</html>
