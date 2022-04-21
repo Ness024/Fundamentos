@@ -4,60 +4,131 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Fundamentos De JavaScript</title>
   </head>
   <body>
     <h2 style="text-align: center">
-      Practicas del video 35 del tutorial De JavaScript
+      Practicas del video 35 y 36 del tutorial De JavaScript
     </h2>
 
     <script>
-      /*--------------------------------------------------------------------------
+      /*---------------------------------------------------------------------------------------
       1) Programa una función que cuente el número de caracteres de una cadena
       de texto, pe. miFuncion("Hola Mundo") devolverá 10.
-      --------------------------------------------------------------------------*/
+      ---------------------------------------------------------------------------------------*/
 
       function miFuncion(cadena = "Hola Mundo") {
         console.info(`La cadena "${cadena}" tiene ${cadena.length} caracteres`);
       }
+
       miFuncion();
       miFuncion("Hi...My Name is Nestor");
-
-      /*--------------------------------------------------------------------------
+      /*---------------------------------------------------------------------------------------
       2) Programa una función que te devuelva el texto recortado según el número
       de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
-      --------------------------------------------------------------------------*/
+      ---------------------------------------------------------------------------------------*/
 
       function miFuncion2(cadena = "Hola Mundo", longitud = 4) {
         console.info(cadena.slice(0, longitud));
       }
+
       miFuncion2();
       miFuncion2("Mama mima a Memo", 11);
+      miFuncion2("Practicas de javacript", 7);
 
-      /*--------------------------------------------------------------------------
+      /*---------------------------------------------------------------------------------------
       3) Programa una función que dada una String te devuelva un Array de textos
       separados por cierto caracter, pe. miFuncion('hola que tal', ' ')
       devolverá ['hola', 'que', 'tal'].
-      --------------------------------------------------------------------------*/
+      ---------------------------------------------------------------------------------------*/
 
       function miFuncion3(cadena = "Hola Que Tal", separador = " ") {
         console.info(cadena.split(separador));
       }
-      miFuncion3();
-      miFuncion3("Deja_La_programacion_y_vamo_a_pistear...","_");
 
-      /*--------------------------------------------------------------------------
+      miFuncion3();
+      miFuncion3("Deja_La_programacion_y_vamo_a_pistear...", "_");
+
+      /*---------------------------------------------------------------------------------------
       4) Programa una función que repita un texto X veces, pe. miFuncion('Hola
       Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
-      --------------------------------------------------------------------------*/
+      ---------------------------------------------------------------------------------------*/
 
       function miFuncion4(texto = "Hola Mundo", xveces = 3) {
         for (let i = 1; i <= xveces; i++) {
           console.info(`[${i}] ${texto}`);
         }
       }
+
       miFuncion4();
-      miFuncion4("You Won't See Me Die Here",5);
+      miFuncion4("You Won't See Me Die Here", 5);
+
+      /*---------------------------------------------------------------------------------------
+      5) Programa una función que invierta las palabras de una cadena de texto,
+      pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".
+      ---------------------------------------------------------------------------------------*/
+
+      function miFuncion5(texto = "Hola Mundo") {
+        console.info(texto.split("").reverse().join(""));
+      }
+
+      miFuncion5();
+      miFuncion5("Rabia Contra La Luz En Su Agonia");
+      miFuncion5("aniTa Lava La tinA");
+
+      /*---------------------------------------------------------------------------------------
+      6) Programa una función para contar el número de veces que se repite una palabra en un
+      texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
+      ---------------------------------------------------------------------------------------*/
+      
+      //ESTE EJERCICIO NO PUDE REALIZARLO POR MI MISMO TUVE QUE BUSCAR AYUDA
+      function miFuncion6(texto = "Hola Mundo Adios Mundo", palabra = "Mundo") {
+        
+        let a = 0;
+        let cont = 0;
+
+        while (a !== -1) {
+          a = texto.indexOf(palabra, a);
+          if (a !== -1) {
+            a = a + 1;
+            cont = cont + 1;
+          }
+        }
+        console.log(`"${palabra}" se repite ${cont} veces en la frase "${texto}"`);
+      }
+
+      miFuncion6();
+      miFuncion6("programador que programa programas", "programa");
+
+      /*---------------------------------------------------------------------------------------
+      7) Programa una función que valide si una palabra o frase dada, es un palíndromo
+      (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
+      ---------------------------------------------------------------------------------------*/
+
+      function miFuncion7(cadena = "salas") {
+        if (cadena === cadena.split("").reverse().join("")) {
+          console.log(`${true}, si es palindromo`);
+        } else {
+          console.log(`${false}, No es palindromo`);
+        }
+      }
+
+      miFuncion7();
+      miFuncion7("pedro");
+      miFuncion7("anitalavalatina");
+
+      /*---------------------------------------------------------------------------------------
+      8) Programa una función que elimine cierto patrón de caracteres de un texto dado,
+      pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
+      -----------------------------------------------------------------------------------------*/
+
+      function miFuncion8(texto = "xyz1, xyz2, xyz3, xyz4 y xyz5", eliminar = "xyz") {
+        console.info(texto.replace(new RegExp(eliminar, "ig"), ""));
+      }
+
+      miFuncion8();
+      miFuncion8("Cuando cuentes cuentos, cuenta cuantos cuentos cuentas", "cu");
+      miFuncion8("anita lava la tina ", "a");
 
     </script>
   </body>
