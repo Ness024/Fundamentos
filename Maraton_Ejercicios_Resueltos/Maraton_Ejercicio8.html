@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 8</title>
+  </head>
+  <body>
+    <script>
+      const sumatoriaPi = (n = 0) => {
+        let sumatoria = "";
+        let denominador = 1;
+        let pi = (cont = signo = 0);
+        while (cont < n) {
+          signo = cont % 2;
+          if (signo == 0) {
+            sumatoria += " + 1/" + denominador;
+            pi += 1 / denominador;
+          }
+          if (signo == 1) {
+            sumatoria += " - 1/" + denominador;
+            pi -= 1 / denominador;
+          }
+          cont++;
+          denominador += 2;
+        }
+        pi *= 4;
+        console.log(`4(${sumatoria}) = ${pi} `);
+      };
+      sumatoriaPi(3);
+      sumatoriaPi(1000);
+    </script>
+  </body>
+</html>

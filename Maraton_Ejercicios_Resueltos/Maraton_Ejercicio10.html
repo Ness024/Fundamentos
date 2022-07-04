@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 10</title>
+  </head>
+  <body>
+    <script>
+      const collatz = (numero = 0) => {
+        let mensaje = " ";
+        mensaje += numero + " ";
+        while (numero !== 1) {
+          if (numero % 2 == 0) {
+            numero = numero / 2;
+            mensaje += numero + " ";
+          } else {
+            numero = numero * 3 + 1;
+            mensaje += numero + " ";
+          }
+        }
+        console.log(`n= ${mensaje}`);
+      };
+      collatz(18);
+      collatz(19);
+      collatz(20);
+    </script>
+  </body>
+</html>

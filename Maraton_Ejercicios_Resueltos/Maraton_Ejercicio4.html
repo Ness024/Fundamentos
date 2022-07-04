@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio4</title>
+</head>
+<body>
+    <script>
+        const palabras = (palabra1 = " ",palabra2 = " ") => {
+            let a= palabra1.length;
+            let b= palabra2.length;
+
+            if(a > b){
+                console.log(`Palabra 1 : ${palabra1}\nPalabra 2 = ${palabra2}\nLa palabra ${palabra1} tiene ${a-b} letras mas que ${palabra2}`);
+            }else{
+                if(a < b){
+                console.log(`Palabra 1 : ${palabra1}\nPalabra 2 = ${palabra2}\nLa palabra ${palabra2} tiene ${b-a} letras mas que ${palabra1}`);
+                }else{
+                console.log(`Palabra 1 : ${palabra1}\nPalabra 2 = ${palabra2}\nLas dos palabras tienen el mismo largo`);
+                }
+            }
+        }
+        palabras("edificio","tren");
+        palabras("sol","paralelepipedo");
+        palabras("plancha","lapices");
+        palabras(prompt("Ingrese Palabra1"),prompt("ingrese palabra 2"));
+        
+    </script>
+</body>
+</html>

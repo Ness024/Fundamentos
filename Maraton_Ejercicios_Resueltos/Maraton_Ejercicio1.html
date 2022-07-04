@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 1</title>
+  </head>
+  <body>
+    <script>
+      const convertir = (opcion = 0, longitud = 0) => {
+        if (opcion == 1) {
+          let cm = longitud * 2.54;
+          console.log(`Ingrese Longitud: ${longitud}\n${longitud} in = ${cm} cm`);
+        } else {
+          if (opcion == 2) {
+            let pulgadas = longitud / 2.54;
+            console.log(`Ingrese Longitud: ${longitud}\n${longitud} cm = ${pulgadas} in`);
+          } else {
+            console.log(`Opcion No valida`);
+          }
+        }
+      };
+      convertir(prompt("Convertidor\n1) Pulgada a cm \n 2)cm a Pulgada"),prompt("Ingrese Longitud"));
+    </script>
+  </body>
+</html>

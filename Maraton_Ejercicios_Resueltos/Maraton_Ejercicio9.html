@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 9</title>
+  </head>
+  <body>
+    <script>
+      let fraccion = 0;
+      let cont = 2;
+      let mensaje = "";
+      let Potencia = 0;
+      let suma = 0;
+      while (cont <= 1000000) {
+        fraccion = 1 / cont;
+        cont = cont * 2;
+        Potencia++;
+        suma += fraccion;
+        mensaje += `${Potencia}   \t\t${fraccion}       ${suma} \n`;
+      }
+      console.log(`Potencia  Fraccion   Suma \n${mensaje}`);
+    </script>
+  </body>
+</html>

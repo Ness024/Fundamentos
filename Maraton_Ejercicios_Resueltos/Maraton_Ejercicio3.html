@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eercicio 2</title>
+  </head>
+  <body>
+    <script>
+      const division = (dividiendo = 0, divisor = 0) => {
+        let cociente = dividiendo / divisor;
+        let residuo = dividiendo % divisor;
+        if (residuo > 0) {
+          console.log(`La division no es exacta\nCociente = ${cociente}\nResiduo = ${residuo}`);
+        } else {
+          console.log(`La division es exacta\nCociente = ${cociente}\nResiduo = ${residuo}`);
+        }
+      }
+      division(14, 5);
+      division(100, 10);
+      division(prompt("Ingrese Dividendo", " "),prompt("Ingrese Divisor", " "));
+    </script>
+  </body>
+</html>

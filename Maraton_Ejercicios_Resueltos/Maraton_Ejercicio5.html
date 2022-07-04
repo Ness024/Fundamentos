@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 5</title>
+  </head>
+  <body>
+    <script>
+      const triangulo = (a = 0, b = 0, c = 0) => {
+        if (a + b > c && a + c > b && b + c > a) {
+          if (a == b && b == c) {
+            console.log(`a: ${a}\nb: ${b}\nc: ${c}\nEl triangulo es Equilatero`);
+          } else {
+            if (a != b && b != c) {
+              console.log(`a: ${a}\nb: ${b}\nc: ${c}\nEl triangulo es Escaleno`);
+            } else {
+              console.log(`a: ${a}\nb: ${b}\nc: ${c}\nEl triangulo es Isosceles`);
+            }
+          }
+        } else {
+          console.log(`a: ${a}\nb: ${b}\nc: ${c}\nNo es un triangulo valido`);
+        }
+      };
+      triangulo(3.9, 6.0, 1.2);
+      triangulo(1.9, 2, 2);
+      triangulo(3.0, 5.0, 4.0);
+      triangulo(
+        parseFloat(prompt("a")),
+        parseFloat(prompt("b")),
+        parseFloat(prompt("c"))
+      );
+
+    </script>
+  </body>
+</html>

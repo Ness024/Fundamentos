@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function numero_decimal(datos = []) {
+        let mensaje = "";
+        let cont = datos.length - 1;
+        let decimal = 0;
+        for (let i = 0; i < datos.length; i++) {
+          decimal += datos[i] * Math.pow(2, cont);
+          mensaje += `${datos[i]}(2^${cont})\n`;
+          cont--;
+        }
+        //console.log(`${mensaje}\nDecimal = ${decimal}`);
+        console.log(decimal);
+      }
+      //  a = [0, 1, 0, 0, 1];
+      // numero_decimal(a);
+
+      function bloque_valido(datos = []) {
+        let valor = datos.length % 4;
+        if (valor == 0) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      //x= [0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0];
+      // y = [0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1];
+
+      // console.log(bloque_valido(x));
+      // console.log(bloque_valido(y));
+      //-----------------------------------------------------------------------------------
+
+      let array = [];
+      let mensaje1 = "";
+      function decodificar_bloques(datos = []) {
+        /*let cont = 0;
+        let dedo = 0;
+        let dedo1 = 0;
+        dedo = datos.length % 4;
+        dedo1 = datos.length / 4;
+        console.log(dedo);
+        if (dedo == 0) {
+          for (let i = 0; i < datos.length; i++) {
+            for (let j = 0; j < 4; j++) {
+              array[i] += numero_decimal(datos);
+            }
+            mensaje1 += array[i];
+          }
+        }
+        console.log(mensaje1);
+      */
+      }
+
+      let x = [0, 1, 0, 1];
+      let y = [0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0];
+      let z = [0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1];
+
+      decodificar_bloques(y);
+    </script>
+  </body>
+</html>
